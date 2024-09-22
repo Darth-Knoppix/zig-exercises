@@ -9,4 +9,13 @@ pub fn main() void {
         // Print unicode character and codepoint
         std.debug.print("- {u} ({d})\n", .{ value, value });
     }
+
+    var arr_b = [4]u8{ undefined, undefined, undefined, undefined };
+
+    arr_b[1] = 4;
+    arr_b[3] = 4;
+
+    for (0.., arr_b) |index, element| {
+        std.debug.print("-> {d} ({d})\n", .{ index, element });
+    }
 }
